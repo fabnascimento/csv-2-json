@@ -2,4 +2,6 @@
 
 .title{
   @include carbon--type-style('productive-heading-05');
+  padding-top: $layout-02;
+  padding-bottom: $layout-02;
 }

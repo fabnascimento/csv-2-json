@@ -56,25 +56,31 @@ class Index extends React.Component {
     return (
       <div>
         <Head title="CSV 2 JSON Converter"></Head>
-        <h1 className="title">CSV - JSON Tool</h1>
+        <div className="bx--grid">
+          <div className="bx--row">
+            <div className="bx--col">
+              <h1 className="title">CSV - JSON Tool</h1>
         
-        <form onSubmit={this.convertCSV2JSON} encType="multipart/form-data">
-          <FileUploader 
-            labelTitle="Upload your csv"
-            labelDescription="only one csv file per usage"
-            buttonLabel="Add File"
-            name="csv"
-            onChange={this.handleChange}
-            accept={['.csv']}
-            filenameStatus={this.state.fileStatus}
-            tabIndex={1}
-          >
-          </FileUploader>
-          <Button type="submit">
-            Convert
-          </Button>
-          <pre>{JSON.stringify(this.state.json)}</pre>
-        </form>
+              <form onSubmit={this.convertCSV2JSON} encType="multipart/form-data">
+                <FileUploader 
+                  labelTitle="Upload your csv"
+                  labelDescription="only one csv file per usage"
+                  buttonLabel="Add File"
+                  name="csv"
+                  onChange={this.handleChange}
+                  accept={['.csv']}
+                  filenameStatus={this.state.fileStatus}
+                  tabIndex={1}
+                >
+                </FileUploader>
+                <Button type="submit">
+                  Convert
+                </Button>
+                <pre>{JSON.stringify(this.state.json)}</pre>
+              </form>
+            </div>
+          </div>
+        </div>
       </div>
     ) 
   }
